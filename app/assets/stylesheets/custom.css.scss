@@ -1,0 +1,115 @@
+@import "bootstrap";
+@import "font-mixins.css.scss";
+
+$header_height: 60px;
+$footer_height: 40px;
+$content_width: 960px;
+
+html, body {
+	height: 100%;
+	@include font-cinzel-regular;
+	@include font-size-normal;
+	@include font-color-navy;
+	text-align: center;
+}
+
+/* outine all elements with red box for troubleshooting */
+// div, nav, a {
+// 	border: 1px solid red;
+// }
+
+/* wrapper for all content */
+#content-wrapper {
+	background: url(day3_chatsj_LSCPgarden1_2014-06-02.jpg) center center/cover fixed;
+	position: absolute;
+	margin: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	min-height: 300px;
+	min-width: $content_width;
+}
+
+/* header */
+#header-wrapper, #header-content {
+	height: ($header_height);
+	margin-top: 0;
+	width: 100%;
+	position: absolute;
+	overflow: hidden;
+}
+
+#header-wrapper {
+	background: $dark;
+	box-shadow: 0 2px 20px 2px	black;
+	z-index: 4;
+}
+
+#header-content {
+	height: $header_height;
+	line-height: $header_height;
+	font-size: 40px;
+	@include font-cinzel-regular;
+	@include font-color-gold;
+	z-index: 5;
+}
+
+/* page */
+#page-wrapper, #page-content {
+	position: absolute;
+	top: $header_height;
+	bottom: $footer_height;
+	left: 5%;
+	right: 5%;
+	border-bottom: 0;
+}
+
+#page-wrapper {
+	background: $navy;
+	opacity: 0.9;
+	overflow-x: hidden;
+	min-width: $content_width;
+}
+
+#page-content {
+	@include font-color-gold;
+	@include font-gandhi-sans-regular;
+	font-size: 20px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	text-align: center;
+	min-width: $content_width;
+}
+
+/* footer */
+#footer-wrapper {
+	position: absolute;
+	background: $dark;
+	opacity: 0.98;
+	height: $footer_height;
+	line-height: $footer_height;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	nav {
+		@include font-color-gold;
+		margin-right: 30px;
+		a {
+			@include font-color-gold;
+			margin: 0px 5px;
+			&:hover {
+				@include font-color-babyblue;
+			}
+		}
+	}
+}
+
+/* title page */
+#page-title {
+	@include font-size-huge;
+	@include font-cinzel-regular;
+	@include font-color-gold;
+	float: left;
+	margin-left: 30px;
+}

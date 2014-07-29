@@ -1,0 +1,13 @@
+<% provide(:page_title, 'Pictures') %>
+<% @header_title = "Pics on Pics" %>
+
+<% @pictures.each do |picture| %>
+	<%= link_to picture, class: "pic-wrapper" do %>
+			<%= image_tag(picture.uri.split('/').last) %>
+			<div>
+				Day <%= picture.day.gsub('10','010')[1..-1] %> - <%= picture.location %>
+			</div>
+	<% end %>
+<% end %>
+
+<%= will_paginate @pictures, :inner_window => 7 %>

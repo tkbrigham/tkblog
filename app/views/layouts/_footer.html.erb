@@ -1,0 +1,15 @@
+<div id="footer-wrapper">
+
+<div id="page-title">
+	\\ &nbsp&nbsp <%= yield(:page_title) %> &nbsp&nbsp \\
+</div>
+
+	<nav style="float: right">
+		<%= link_to "Home", root_url %> |
+		<!-- disabled features
+		<%= link_to "Days", days_path %> |
+		<%= link_to "Wineries", wineries_path %> |
+		-->
+		<%= link_to "Pictures", pictures_path %>
+	</nav>
+</div>

@@ -1,0 +1,60 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "font-mixins.css.scss";
+
+$max_image_width: 250px;
+
+a {
+	@include font-color-gold;
+	&:hover {
+		@include font-color-babyblue;
+		text-decoration: none;
+	}
+}
+
+.pic-wrapper {
+	display: inline-block;
+	min-width: 30%;
+	margin: 60px 0 0;
+	vertical-align: middle;
+	img {
+		max-height: 250px;
+		max-width: $max_image_width;
+	}
+	div {
+		padding-top: 10px;
+	}
+}
+
+.pagination {
+	width: 100%;
+	text-align: center;
+	padding: 20px;
+	ul {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		li {
+			display: inline;
+			a {
+				@include font-color-eggshell;
+				&:hover {
+					@include font-color-babyblue;
+				}
+			}
+		}
+	}
+}
+
+.pic-show {
+	margin-top: 30px;
+	img {
+		max-height: 570px;
+		max-width: 1100px;
+	}
+	div {
+		padding: 30px 0 10px;
+	}
+}

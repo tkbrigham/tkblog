@@ -1,0 +1,9 @@
+<% provide(:page_title, 'Pictures') %>
+<% @header_title = @picture_header %>
+
+<%= link_to :back do %>
+	<div class="pic-show">
+			<%= image_tag(@picture.uri.split('/').last) %>
+			<div>\\ Back \\</div>
+	</div>
+<% end %>
