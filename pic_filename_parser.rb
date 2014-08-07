@@ -5,9 +5,7 @@ Dir.glob('app/assets/images/**/*.jpg').each do |file|
 	location = file.split('/').last.split('_')[1]
 	description = file.split('/').last.split('_')[2]
 	date = file.split('/').last.split('_')[3].to_s[0..-5]
-	uri = file[18..-1]
-
-	puts uri
+	uri = "http://s3.amazonaws.com/tkblog-pics/" + file[18..-1]
 
 	if day.length == 1	
 		day = "0"+day
@@ -98,4 +96,4 @@ Dir.glob('app/assets/images/**/*.jpg').each do |file|
 	insert_into << "('#{day}', '#{location}', '#{description}', '#{date}', '#{uri}'),"
 end
 
-# puts insert_into
+puts insert_into
