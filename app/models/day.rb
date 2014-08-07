@@ -1,3 +1,3 @@
 class Day < ActiveRecord::Base
-	has_many :pictures, as :imageable
+	has_many :pictures
 end
