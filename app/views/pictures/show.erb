@@ -3,7 +3,7 @@
 
 <%= link_to :back do %>
 	<div class="pic-show">
-			<%= image_tag(@picture.uri.split('/').last) %>
+			<%= image_tag @picture.uri %>
 			<div>\\ Back \\</div>
 	</div>
 <% end %>
