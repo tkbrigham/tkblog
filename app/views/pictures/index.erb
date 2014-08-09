@@ -5,12 +5,13 @@
 <%= "TEST1" %>
 
 <% @pictures.each do |picture| %>
-	<%= link_to picture.uri, class: "pic-wrapper" do %>
+	<%= link_to "HERE'S A PICTURE", picture %>
+	<%= link_to picture, class: "pic-wrapper" do %>
 			<!-- <%= image_tag picture.uri %> -->
 			<!-- <div> -->
 				<!-- Day <%= picture.day.gsub('10','010')[1..-1] %> - <%= picture.location %> -->
 			<!-- </div> -->
-			<%= "HI" %>
+			<%= "TEST2" %>
 	<% end %> 
 <% end %>
 
