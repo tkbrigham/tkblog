@@ -3,9 +3,10 @@
 
 
 <%= "TEST1" %>
+<%= link_to "HERE'S A PICTURE1", picture %>
 
 <% @pictures.each do |picture| %>
-	<%= link_to "HERE'S A PICTURE", picture %>
+	<%= link_to "HERE'S A PICTURE2", picture %>
 	<%= link_to picture, class: "pic-wrapper" do %>
 			<!-- <%= image_tag picture.uri %> -->
 			<!-- <div> -->
@@ -14,5 +15,7 @@
 			<%= "TEST2" %>
 	<% end %> 
 <% end %>
+
+<%= "TEST3" %>
 
 <%= will_paginate @pictures, :inner_window => 7 %>
