@@ -3,11 +3,12 @@
 
 <% @pictures.each do |picture| %>
 	<%= link_to picture, class: "pic-wrapper" do %>
-			<%= image_tag picture.uri %>
-			<div>
-				Day <%= picture.day.gsub('10','010')[1..-1] %> - <%= picture.location %>
-			</div>
-	<% end %>
+			<!-- <%= image_tag picture.uri %> -->
+			<!-- <div> -->
+				<!-- Day <%= picture.day.gsub('10','010')[1..-1] %> - <%= picture.location %> -->
+			<!-- </div> -->
+			<%= "HI" %>
+	<% end %> 
 <% end %>
 
 <%= will_paginate @pictures, :inner_window => 7 %>
