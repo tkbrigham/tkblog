@@ -1,8 +1,11 @@
 <% provide(:page_title, 'Pictures') %>
 <% @header_title = "Pics on Pics" %>
 
+
+<%= "TEST1" %>
+
 <% @pictures.each do |picture| %>
-	<%= link_to picture, class: "pic-wrapper" do %>
+	<%= link_to picture.uri, class: "pic-wrapper" do %>
 			<!-- <%= image_tag picture.uri %> -->
 			<!-- <div> -->
 				<!-- Day <%= picture.day.gsub('10','010')[1..-1] %> - <%= picture.location %> -->
