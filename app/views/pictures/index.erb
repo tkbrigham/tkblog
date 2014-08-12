@@ -2,9 +2,6 @@
 <% @header_title = "Pics on Pics" %>
 
 
-<%= "TEST1" %>
-<%= link_to "HOMEPATH", root_path %>
-
 <% @pictures.each do |picture| %>
 	<%= link_to picture, class: "pic-wrapper" do %>
 		<%= image_tag picture.uri %>
@@ -13,7 +10,5 @@
 		</div>
 	<% end %>
 <% end %>
-
-<%= "TEST3" %>
 
 <%= will_paginate @pictures, :inner_window => 7 %>
