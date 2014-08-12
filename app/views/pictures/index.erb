@@ -3,17 +3,15 @@
 
 
 <%= "TEST1" %>
-<%= link_to "HOMEPATH", home_path %>
+<%= link_to "HOMEPATH", root_path %>
 
 <% @pictures.each do |picture| %>
-	<%= link_to "HERE'S A PICTURE2", picture %>
-	<!-- <%= link_to picture, class: "pic-wrapper" do %> -->
-			<!-- <%= image_tag picture.uri %> -->
-			<!-- <div> -->
-				<!-- Day <%= picture.day.gsub('10','010')[1..-1] %> - <%= picture.location %> -->
-			<!-- </div> -->
-			<%= "TEST2" %>
-	<!-- <% end %>  -->
+	<%= link_to picture, class: "pic-wrapper" do %>
+		<%= image_tag picture.uri %>
+		<div>
+			Day <%= picture.day.gsub('10','010')[1..-1] %> - <%= picture.location %>
+		</div>
+	<% end %>
 <% end %>
 
 <%= "TEST3" %>
